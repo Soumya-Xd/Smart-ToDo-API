@@ -1,0 +1,200 @@
+type: collection.insomnia.rest/5.0
+name: Smart ToDo API
+meta:
+  id: wrk_6f50ae02e07f44a29c3cffcb761332eb
+  created: 1766840657160
+  modified: 1766840657160
+  description: ""
+collection:
+  - url: http://localhost:5000/api/auth/register
+    name: Register User
+    meta:
+      id: req_561718a939e24157a0fca491be36f165
+      created: 1766840746045
+      modified: 1766840809346
+      isPrivate: false
+      description: ""
+      sortKey: -1766840746045
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "email": "test@todo.com",
+          "password": "123456"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/api/auth/login
+    name: Login User
+    meta:
+      id: req_8f685c38dc894c60816ce4d1fe5148c9
+      created: 1766841072927
+      modified: 1766841117704
+      isPrivate: false
+      description: ""
+      sortKey: -1766841072927
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "email": "test@todo.com",
+          "password": "123456"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/api/tasks
+    name: Create Task
+    meta:
+      id: req_95063ce77cbe4795be6475bacb725efd
+      created: 1766841905465
+      modified: 1766842129408
+      isPrivate: false
+      description: ""
+      sortKey: -1766841905465
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "title": "My First Valid Task",
+          "description": "Now mongoose validation will pass"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - id: pair_48305f4ee99b489fa9fa1360fdff86bf
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGZkOWYyODgxNjNlOWNmODZjNWY1MCIsImlhdCI6MTc2Njg0MTExOSwiZXhwIjoxNzY2ODQ0NzE5fQ.WlyC33Fty_ruGfwndEBLtyaqf6g79oLWAYYvHxGueas
+        description: ""
+        disabled: false
+        type: text
+        multiline: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/api/tasks
+    name: Get Tasks
+    meta:
+      id: req_b7000743d0d9458b86b6730f816ece56
+      created: 1766842202010
+      modified: 1766842253133
+      isPrivate: false
+      description: ""
+      sortKey: -1766842202010
+    method: GET
+    headers:
+      - id: pair_ea3c8e2c002145c3a8793a7034d40233
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGZkOWYyODgxNjNlOWNmODZjNWY1MCIsImlhdCI6MTc2Njg0MTExOSwiZXhwIjoxNzY2ODQ0NzE5fQ.WlyC33Fty_ruGfwndEBLtyaqf6g79oLWAYYvHxGueas
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/api/tasks/694fdf13e14fd9641833e274
+    name: Update Task
+    meta:
+      id: req_9ac049d66dbc4729a6e24329d669f7ad
+      created: 1766842284182
+      modified: 1766842395684
+      isPrivate: false
+      description: ""
+      sortKey: -1766842284182
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "completed": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - id: pair_746c18fcb1824d06b9df393f5190d0d3
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGZkOWYyODgxNjNlOWNmODZjNWY1MCIsImlhdCI6MTc2Njg0MTExOSwiZXhwIjoxNzY2ODQ0NzE5fQ.WlyC33Fty_ruGfwndEBLtyaqf6g79oLWAYYvHxGueas
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:5000/api/tasks/694fdf13e14fd9641833e274
+    name: Delete Task
+    meta:
+      id: req_5a170d7939dd4187ad586042300ff18d
+      created: 1766842424090
+      modified: 1766842476155
+      isPrivate: false
+      description: ""
+      sortKey: -1766842424090
+    method: DELETE
+    headers:
+      - id: pair_3c388c0739b74f9bbbfa144cb8bc0a66
+        name: Authorization
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NGZkOWYyODgxNjNlOWNmODZjNWY1MCIsImlhdCI6MTc2Njg0MTExOSwiZXhwIjoxNzY2ODQ0NzE5fQ.WlyC33Fty_ruGfwndEBLtyaqf6g79oLWAYYvHxGueas
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_2d63117714ad4a01f95de547035be0533757e504
+    created: 1766840657164
+    modified: 1766840657164
+environments:
+  name: Base Environment
+  meta:
+    id: env_2d63117714ad4a01f95de547035be0533757e504
+    created: 1766840657162
+    modified: 1766840657162
+    isPrivate: false
